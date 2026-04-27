@@ -22,6 +22,7 @@
 			<img class="logo" src="images/logoColor.png">
 			<div class="title">
 				<h1>Anna Tookey.</h1>
+				</script>
 			</div>
 
 
@@ -43,12 +44,21 @@
 						<a href="#">
 							<li>More?</li>
 						</a>
+						<li><button onclick="myFunction()">Toggle dark mode</button>
+							<script>
+								function myFunction() {
+									var element = document.body;
+									element.classList.toggle("dark-mode");
+								}</script>
+						</li>
+
 					</ul>
 				</nav>
 			</div>
 		</div>
 
 	</header>
+
 
 
 	<section id="about">
@@ -117,8 +127,7 @@
 				<div class="img3-container"><img src="images/EnciSolution.jpg" class="img3">
 					<p>Showcasing an early version of <a
 							href="https://store.steampowered.com/app/2602500/Encis_Solution/">Enci's Solution</a> with
-						the
-						team at a convention in the UAE. </p>
+						the team at a convention in the UAE. </p>
 				</div>
 			</div>
 		</div>
@@ -127,10 +136,13 @@
 	<br>
 
 	<section id="projects">
-		<h1>👾Professional Projects</h1>
+		<h2>👾Commercial Projects</h2>
 		<div class="projects-container">
 			<div class="growtopia">
-				<img src="images/gameJam.jpg">
+				<iframe width=100% height=50% src="https://www.youtube.com/embed/3Iw_tPC5vo0?si=egb4Cp78vJxK0er4"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 				<ul>
 					<li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
 							stroke="#638863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -145,7 +157,7 @@
 							class="lucide lucide-clock-icon lucide-clock">
 							<circle cx="12" cy="12" r="10" />
 							<path d="M12 6v6l4 2" />
-						</svg> 12 Months</li>
+						</svg> 13 Months</li>
 					<li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
 							stroke="#638863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
 							class="lucide lucide-hammer-icon lucide-hammer">
@@ -155,16 +167,22 @@
 								d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5" />
 						</svg> Custom C++ Engine</li>
 				</ul>
-				<h2>🪴<a href="https://www.growtopiagame.com/">Growtopia</a> 🔗</h2>
+				<h3>🪴<a href="https://www.growtopiagame.com/">Growtopia</a> 🔗</h3>
 				<p>Developed by <a href="https://www.ubisoft.com/en-us/company/careers/locations/abu-dhabi "
 						target="_blank">Ubisoft
 						Abu Dhabi</a>.</p>
-				<p>Role: <span>Game designer & QA Tester.</span></p>
-				<p>Engine: Custom C++ Engine</p>
+				<p>Role: <span>Game designer & QA Tester.</span></p> <br>
+				<p>Growtopia is a free-to-play, 2D pixelated sandbox MMO game focused on creation, farming, and trading.
+				</p><br>
+				<p>Players can build almost anything, interact in a vast community, and utilize a player-driven economy
+					based on world locks</p>
 
 			</div>
 			<div class="enciSolution">
-				<img src="images/gameJam.jpg">
+				<iframe width=100% height=50% src="https://www.youtube.com/embed/sNHuSvFeu5E?si=8-8qp-_vCGtp7x6n"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 				<ul>
 					<li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
 							stroke="#638863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -179,7 +197,7 @@
 							class="lucide lucide-clock-icon lucide-clock">
 							<circle cx="12" cy="12" r="10" />
 							<path d="M12 6v6l4 2" />
-						</svg> 12 Months</li>
+						</svg> 10 Months</li>
 					<li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
 							stroke="#638863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
 							class="lucide lucide-hammer-icon lucide-hammer">
@@ -189,15 +207,20 @@
 								d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5" />
 						</svg> Unity</li>
 				</ul>
-				<h2>💎Enci's Solution</h2>
+				<h3>💎Enci's Solution</h3>
+				<p>Developed by <a href="https://www.darkemerald.ae/" target="_blank">Dark Emerald Studios</a>.</p>
+				<p>Role: <span>Game designer.</span></p><br>
+				<p>Enci's Solution is a hand-painted, 2.5D narrative platformer game for PS5 and PC. </p><br>
+				<p>It follows Ji'we and a robot named Enci on a challenging journey through a dystopian, desolate
+					underground to the surface of planet Regalia.</p>
 			</div>
 		</div>
 
-		<h1>🎲 Personal Projects</h1>
+		<h2>🎲 Personal Projects</h2>
 		<div class="projects-container">
 			<div class="Alien Aftermath">
 				<img src="images/gameJam.jpg">
-				<h2>Enci's Solution</h2>
+				<h3>Enci's Solution</h3>
 			</div>
 		</div>
 

@@ -17,12 +17,21 @@ a:link {
     color: #4682B4;
 }
 
+a:hover{
+    cursor: pointer;
+}
+
 a:visited {
     color: #4682B4;
 }
 
 p span {
     background: linear-gradient(to top, #D3EEE1 40%, transparent 30%);
+}
+
+.dark-mode{
+    background-color: rgb(25, 16, 44);
+    color: white;
 }
 
 
@@ -314,44 +323,44 @@ Instead a "pseudo" element can be used.*/
     /* Adjust based on your header height */
 }
 
-#projects h1 {
-    font-size: 3rem;
-}
-
 #projects h2 {
     margin-top: 0;
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 #projects div p {
-    font-size: 1.1rem;
     font-size: clamp(0.6rem, 1vw, 3rem);
     margin-top: 0;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.1rem;
 }
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 450px));
     gap: 2rem;
 }
 
 .projects-container div {
     background-color: white;
     border-radius: 0.8rem;
-    padding: 1rem 1.5rem 1rem 1.5rem;
+    padding: 1rem 1rem 1rem 1rem;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
-    transition: transform 0.5s;
+    transition: transform 0.5s, background-color 0.5s ease;
+    margin-bottom: 2rem;
+    padding-bottom: 25%;
 }
 
 .projects-container div img{
     width: 100%;
 }
 
+
 .projects-container div:hover {
     transform: translateY(-10px);
+    cursor: pointer;
+    background-color: #f2f8f5;
 }
 
 .projects-container ul{
@@ -360,9 +369,11 @@ Instead a "pseudo" element can be used.*/
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1rem;
-    width: 80%;
+    width: 100%;
     flex-direction: row;
     list-style: none;
+    font-size: clamp(0.6rem, 1vw, 3rem);
+
 }
 
 
