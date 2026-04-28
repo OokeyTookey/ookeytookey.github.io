@@ -29,9 +29,27 @@ p span {
     background: linear-gradient(to top, #D3EEE1 40%, transparent 30%);
 }
 
+/*------------------------- Dark Mode -----------------------*/
+
 .dark-mode{
-    background-color: rgb(25, 16, 44);
-    color: white;
+    background-color: #1E1E1E;
+    color: whitesmoke
+}
+
+.dark-mode .about-me h1{
+    color: whitesmoke
+}
+
+.dark-mode .navigation-container{
+    background-color: #1E1E1E;
+}
+
+.dark-mode .title h1::before{
+    background-color:#316834;
+}
+
+.dark-mode span{
+    background: linear-gradient(to top, #23a7a0bd 40%, transparent 30%);
 }
 
 
