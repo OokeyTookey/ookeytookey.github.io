@@ -17,7 +17,7 @@ a:link {
     color: #4682B4;
 }
 
-a:hover{
+a:hover {
     cursor: pointer;
 }
 
@@ -31,24 +31,24 @@ p span {
 
 /*------------------------- Dark Mode -----------------------*/
 
-.dark-mode{
+.dark-mode {
     background-color: #1E1E1E;
     color: whitesmoke
 }
 
-.dark-mode .about-me h1{
+.dark-mode .about-me h1 {
     color: whitesmoke
 }
 
-.dark-mode .navigation-container{
+.dark-mode .navigation-container {
     background-color: #1E1E1E;
 }
 
-.dark-mode .title h1::before{
-    background-color:#316834;
+.dark-mode .title h1::before {
+    background-color: #316834;
 }
 
-.dark-mode span{
+.dark-mode span {
     background: linear-gradient(to top, #23a7a0bd 40%, transparent 30%);
 }
 
@@ -197,34 +197,36 @@ Instead a "pseudo" element can be used.*/
     align-items: center;
     justify-content: left;
     margin-right: 2%;
-    width: 100%;
 }
 
 .images-container p {
     font-size: 0.7rem;
-    font-size: clamp(0.5rem, 1vw, 3rem);
+    font-size: clamp(0.5rem, 1vw, 1rem);
     margin-bottom: 0;
+    max-width: 12rem;
 }
 
 .images-container img {
     /*Clamp takes smallest size, middle and max*/
     height: clamp(150px, 25vw, 400px);
-    width: auto;
-
     margin: 0;
 
     transition: transform 1s;
 }
 
-.img1-container {
-    transform: rotate(-8deg) translateY(-2%) translateX(35%);
-    transition: transform 0.5s ease;
-
+.img1-container,
+.img2-container,
+.img3-container {
     background: white;
     padding: 10px 10px 30px;
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
+    max-width: 1700px
+}
 
+.img1-container {
+    transform: rotate(-8deg) translateY(-2%) translateX(35%);
+    transition: transform 0.5s ease;
     z-index: 0;
 }
 
@@ -237,11 +239,6 @@ Instead a "pseudo" element can be used.*/
     transform: rotate(5deg) translateY(-15%);
     z-index: 4;
     transition: transform 0.5s;
-
-    background: white;
-    padding: 10px 10px 30px;
-    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
 }
 
 .img2-container:hover {
@@ -252,11 +249,6 @@ Instead a "pseudo" element can be used.*/
 .img3-container {
     transform: rotate(8deg) translateY(-8%) translateX(-20%);
     z-index: 0;
-
-    background: white;
-    padding: 10px 10px 30px;
-    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
     transition: transform 1s;
 }
 
@@ -278,6 +270,11 @@ Instead a "pseudo" element can be used.*/
     margin-top: 0;
     margin-bottom: 0;
     color: #1c2921;
+}
+
+.about-me p{
+        font-size: clamp(1rem, 1vw, 4rem);
+
 }
 
 .flags {
@@ -326,8 +323,8 @@ Instead a "pseudo" element can be used.*/
     transition: background-color 0.5s, color 0.5s;
 }
 
-.current-goal:hover{
-    background-color:  rgb(255, 108, 108);
+.current-goal:hover {
+    background-color: rgb(255, 108, 108);
     color: white;
 }
 
@@ -370,7 +367,7 @@ Instead a "pseudo" element can be used.*/
     padding-bottom: 25%;
 }
 
-.projects-container div img{
+.projects-container div img {
     width: 100%;
 }
 
@@ -381,7 +378,7 @@ Instead a "pseudo" element can be used.*/
     background-color: #f2f8f5;
 }
 
-.projects-container ul{
+.projects-container ul {
     padding-left: 0;
     display: flex;
     justify-content: flex-start;
@@ -402,7 +399,7 @@ Instead a "pseudo" element can be used.*/
 /*cURRENTLY WORKING ON BOX?*/
 
 footer {
-   margin-top: 30%;
+    margin-top: 30%;
     margin-left: 5%;
     font-size: 0.8rem;
 }
