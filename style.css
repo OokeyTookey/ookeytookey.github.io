@@ -192,11 +192,11 @@ Instead a "pseudo" element can be used.*/
 
 .images-container {
     margin-top: 6%;
-
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: right;
     margin-right: 2%;
+    width: 100%;
 }
 
 .images-container p {
@@ -208,7 +208,7 @@ Instead a "pseudo" element can be used.*/
 
 .images-container img {
     /*Clamp takes smallest size, middle and max*/
-    height: clamp(150px, 25vw, 400px);
+    height: clamp(150px, 25vw, 900px);
     margin: 0;
 
     transition: transform 1s;
@@ -263,6 +263,7 @@ Instead a "pseudo" element can be used.*/
 .about-me {
     display: flex;
     flex-direction: column;
+    max-width: 1200px;
 }
 
 .about-me h1 {
@@ -272,9 +273,8 @@ Instead a "pseudo" element can be used.*/
     color: #1c2921;
 }
 
-.about-me p{
-        font-size: clamp(1rem, 1vw, 4rem);
-
+.about-me p {
+    font-size: clamp(1rem, 1vw, 4rem);
 }
 
 .flags {
@@ -300,15 +300,18 @@ Instead a "pseudo" element can be used.*/
     background-color: #dbcdf0;
     border-radius: 10px;
     /*IT GOES LIKE A CLOCK!!!!!*/
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    /* padding: 0.5rem 0.5rem 0.5rem 0.5rem; */
+     padding: clamp(0.5rem, 0.5vw, 3rem);
     transition: padding-right 0.5s, padding-left 0.5s;
+    font-size: clamp(1rem, 1vw, 4rem);
     margin-bottom: 0%;
-
 }
 
 .technologies-tag li:hover {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: clamp(1rem, 1vw, 3rem);
+    padding-left: clamp(1rem, 1vw, 3rem);
+
+    /* padding-left: 2rem; */
 }
 
 .current-goal {
@@ -318,7 +321,8 @@ Instead a "pseudo" element can be used.*/
     border-width: 1px;
     padding: 0.5rem;
     background-color: white;
-    max-width: 350px;
+    /* max-width: 700px; */
+    max-width: fit-content;
     border-radius: 10px;
     transition: background-color 0.5s, color 0.5s;
 }
@@ -335,7 +339,7 @@ Instead a "pseudo" element can be used.*/
     margin-left: 5%;
     margin-right: 5%;
     scroll-margin-top: 150px;
-    /* Adjust based on your header height */
+    /* Adjust this thingy bsed on the heighst */
 }
 
 #projects h2 {
