@@ -392,10 +392,7 @@ Instead a "pseudo" element can be used.*/
     flex-direction: row;
     list-style: none;
     font-size: clamp(0.6rem, 1vw, 3rem);
-
 }
-
-
 
 
 
@@ -403,7 +400,8 @@ Instead a "pseudo" element can be used.*/
 /*cURRENTLY WORKING ON BOX?*/
 
 footer {
-    margin-top: 30%;
+    margin-top: 5%;
     margin-left: 5%;
+    margin-bottom: 1%;
     font-size: 0.8rem;
 }
