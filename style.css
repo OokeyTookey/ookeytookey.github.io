@@ -323,12 +323,10 @@ Instead a "pseudo" element can be used.*/
     margin-left: 5%;
     margin-right: 5%;
     scroll-margin-top: 150px;
-    /* Adjust this thingy bsed on the heighst */
 }
 
 #projects h2 {
     margin-top: 0;
-    font-size: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -357,7 +355,6 @@ iframe{
     padding: 1rem 1rem 1rem 1rem;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
-    transition: transform 0.5s, background-color 0.5s ease;
     margin-bottom: 2rem;
     padding-bottom: 25%;
     border: 8px solid red;
@@ -372,26 +369,23 @@ iframe{
     cursor: pointer;
     background-color: #f2f8f5;
 }
+*/
 
-.projects-container ul {
-    padding-left: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 1rem;
-    width: 100%;
-    flex-direction: row;
-    list-style: none;
-    font-size: clamp(0.6rem, 1vw, 3rem);
-    border: 8px solid yellow;
-}*/
-
-.comerical-projects-container{
-    border: 8px solid black;
+.commerical-projects-container{
+    /* border: 8px solid black; */
     display: grid;
     grid-template-columns:repeat(2, 1fr);
-    max-width: 1300px;
+    max-width: 1000px;
     gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.personal-projects{
+     display: grid;
+     grid-column: 3;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 5rem;
 }
 
 .project{  
@@ -405,11 +399,25 @@ iframe{
    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
    border-radius: 6px;
 
+    transition: transform 0.5s, background-color 0.5s ease;
 }
 
+.project:hover{
+     transform: translateY(-10px);
+    cursor: pointer;
+    background-color: #f2f8f5;
+}
 
 .project iframe{
     aspect-ratio: 4/3;
+}
+
+.project img{
+    /* max-width: 100%; */
+    /* max-height: 100%; */
+    object-fit: cover;
+    height: 100%;
+    max-width: 100%;
 }
 
 .project ul{
