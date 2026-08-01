@@ -2,7 +2,8 @@ body {
     font-family: "SN Pro", "Apple Color Emoji",
         "Segoe UI Emoji",
         "Noto Color Emoji", sans-serif;
-    background-color: #fffefa;
+    /* background-color: #fffefa; */
+    background-color: #fffcf4;
     /*fefcef   fcfcf8 */
     margin: 0;
     font-size: 1.1rem;
@@ -99,7 +100,9 @@ Instead a "pseudo" element can be used.*/
     position: fixed;
 
     top: 0;
-    background-color: #fffefacc;
+    /* background-color: #fffefacc; */
+        background-color: #fffcf4cc;
+
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     margin-bottom: 2%;
