@@ -1,0 +1,50 @@
+body {
+    font-family: "SN Pro", "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Noto Color Emoji", sans-serif;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding-left: 0;
+}
+
+
+/* ------------------------------------------*/
+.about-me-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me-hero p {
+    margin-top: 0vh;
+    margin-bottom: 6vh;
+}
+
+
+.about-me-polaroids {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-me-polaroids img {
+    width: 20%;
+    background: white;
+    padding: 15px 15px 60px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.img1{
+    transform: rotate(5deg);
+}
+
+/* ------------------------------------------*/
