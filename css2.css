@@ -14,10 +14,15 @@ body {
 
 
 /* ------------------------------------------*/
+
 .about-me-hero {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.about-me-hero h1{
+    font-size: 3rem;
 }
 
 .about-me-hero p {
@@ -25,26 +30,67 @@ body {
     margin-bottom: 6vh;
 }
 
+/* ------------------------------------------*/
 
 .about-me-polaroids {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    align-items: top;
 }
 
 .about-me-polaroids img {
-    width: 20%;
-    background: white;
-    padding: 15px 15px 60px;
-    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
+    max-width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
 }
 
-.img1{
-    transform: rotate(5deg);
+.about-me-polaroids p {
+    font-size: clamp(0.5rem, 1vw, 1.5rem);
+    padding: 0rem 1rem 0rem 1rem;
+    text-align: center;
+}
+
+.img1-container,
+.img2-container,
+.img3-container {
+    background: white;
+    padding: 15px 15px 20px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    width: clamp(150px, 20vw, 500px); /*VW to control image size*/
+}
+
+.img1-container{
+    transform: translateX(8rem) translateY(3rem) rotate(-14deg);
+    transition: transform 1s;
+}
+
+.img1-container:hover
+{
+    transform: translateX(-1rem) rotate(-16deg) translateY(1rem);
+}
+
+/*---*/
+
+.img2-container{
+    z-index: 3;
+    transition: transform 1s;
+}
+
+.img2-container:hover{
+
+    transform: scale(110%);
+}
+
+/*---*/
+
+.img3-container{
+    transform: translateX(-8rem) translateY(2.5rem) rotate(14deg);
+    transition: transform 1s;
+}
+
+.img3-container:hover{
+    transform: translateX(1rem) rotate(7deg);
 }
 
 /* ------------------------------------------*/
