@@ -226,8 +226,6 @@ Instead a "pseudo" element can be used.*/
 .technologies-tag li:hover {
     padding-right: clamp(1rem, 1vw, 3rem);
     padding-left: clamp(1rem, 1vw, 3rem);
-
-    /* padding-left: 2rem; */
 }
 
 .current-goal {
@@ -362,7 +360,7 @@ Instead a "pseudo" element can be used.*/
 }
 
 .project:hover{
-     transform: translateY(-10px);
+    transform: translateY(-10px);
     cursor: pointer;
     background-color: #f2f8f5;
 }

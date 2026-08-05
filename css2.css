@@ -2,14 +2,31 @@ body {
     font-family: "SN Pro", "Apple Color Emoji",
         "Segoe UI Emoji",
         "Noto Color Emoji", sans-serif;
+    background-color: rgb(255, 253, 245);
+
 }
 
-.navbar {
+a:link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #4682B4;
+    cursor: pointer;
+}
+
+.navbar-links {
     list-style: none;
     display: flex;
     gap: 2rem;
     justify-content: center;
-    padding-left: 0;
+    cursor: pointer;
+    backdrop-filter: blur(3px);
+
+    padding: 1rem 0 1rem 0;
+
+    top: 0;
+    position: sticky;
+    z-index: 10;
+    font-weight: bold;
 }
 
 
@@ -21,8 +38,11 @@ body {
     align-items: center;
 }
 
-.about-me-hero h1{
+.about-me-hero h1 {
     font-size: 3rem;
+    background: linear-gradient(to top, #D3EEE1 40%, transparent 30%);
+    padding: 0 6rem 0 6rem;
+    margin-top: 0;
 }
 
 .about-me-hero p {
@@ -57,40 +77,131 @@ body {
     padding: 15px 15px 20px;
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
-    width: clamp(150px, 20vw, 500px); /*VW to control image size*/
+    width: clamp(150px, 20vw, 500px);
+    /*VW to control image size*/
 }
 
-.img1-container{
+.img1-container {
     transform: translateX(8rem) translateY(3rem) rotate(-14deg);
     transition: transform 1s;
 }
 
-.img1-container:hover
-{
-    transform: translateX(-1rem) rotate(-16deg) translateY(1rem);
+.img1-container:hover {
+    transform: translateX(0rem) rotate(-16deg) translateY(1rem);
 }
 
 /*---*/
 
-.img2-container{
+.img2-container {
     z-index: 3;
     transition: transform 1s;
 }
 
-.img2-container:hover{
+.img2-container:hover {
 
     transform: scale(110%);
 }
 
 /*---*/
 
-.img3-container{
+.img3-container {
     transform: translateX(-8rem) translateY(2.5rem) rotate(14deg);
     transition: transform 1s;
 }
 
-.img3-container:hover{
+.img3-container:hover {
     transform: translateX(1rem) rotate(7deg);
 }
 
+.dosomething {
+    margin-bottom: 50rem;
+}
+
 /* ------------------------------------------*/
+
+
+.commercial-projects-title {
+    /* border: 8px solid rgb(8, 0, 255); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem 0 3rem 0;
+}
+
+.commercial-projects-title h2 {
+    background: linear-gradient(to top, #D3EEE1 40%, transparent 30%);
+    font-size: 3rem;
+}
+
+.commerical-projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    gap: 4px;
+
+    background: white;
+    padding: 15px 15px 6rem;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: clamp(150px, 22vw, 600px);
+    cursor: pointer;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+}
+
+.project ul {
+    display: flex;
+    align-items: flex-start;
+    list-style: none;
+    gap: 1rem;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.project p {
+    margin: 0;
+}
+
+.commerical-projects-container img {
+    aspect-ratio: 1/1;
+    max-width: 100%;
+    object-fit: cover;
+    margin-top: 1rem;
+}
+
+
+.commercial-p1 {
+    transform: rotate(-2deg);
+    transition: 0.5s ease;
+}
+
+.commercial-p2 {
+    transform: rotate(4deg);
+    transition: 1s ease;
+}
+
+.commercial-p1:hover,
+.commercial-p2:hover {
+    transform: rotate(0deg);
+}
+
+/* ------------------------------------------*/
+
+
+.copyright {
+    text-align: center;
+    padding: 2rem 0 2rem 0;
+    border-top: 1px solid rgb(230, 230, 230);
+
+}
