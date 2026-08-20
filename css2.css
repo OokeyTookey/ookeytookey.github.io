@@ -9,13 +9,13 @@ body {
 
 :root {
   /* Step 1: Tell the browser the page supports both modes */
-  color-scheme: dark;
+  color-scheme: light;
 
   /* Step 2: Define responsive color tokens (Light color, Dark color) */
   --bg-primary: light-dark(rgb(255, 253, 245), #1d2532);
   --text-primary: light-dark(#333333, #ffffff);
   --accent: light-dark(#0066cc, #4da6ff);
-  --paragraph-txt: light-dark(#cdc9c9, #2d2c2c);
+  --paragraph-txt: light-dark(#171717, #2d2c2c);
   --highlight-color: light-dark(#D3EEE1, #2b895b);
 }
 
@@ -26,6 +26,7 @@ body {
 
 p, body p{
     color: var(--paragraph-txt);
+    text-align: center;
 }
 
 a:link {
@@ -44,7 +45,7 @@ a:hover{
 }
 
 h2 {
-    background: linear-gradient(to top, --highlight-color 40%, transparent 30%); /*Some issue here.*/
+    background: linear-gradient(to top, var(--highlight-color) 40%, transparent 40%);
     font-size: 3rem;
     padding: 0 4rem 0 4rem;
     margin-bottom: 0;
@@ -58,18 +59,22 @@ h3 {
 
 /* -----Nav Bar-------------------------------------*/
 
+.navigation-bar{
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
 .navbar-links {
     list-style: none;
     display: flex;
     gap: 2rem;
     justify-content: center;
-    backdrop-filter: blur(3px);
 
     padding: 1rem 0 1rem 0;
 
-    top: 0;
-    position: sticky;
-    z-index: 10;
     font-weight: bold;
 
 }
@@ -84,8 +89,7 @@ h3 {
 
 .about-me-hero h1 {
     font-size: 3rem;
-    background: linear-gradient(to top, #D3EEE1 40%, transparent 30%);
-    padding: 0 6rem 0 6rem;
+background: linear-gradient(to top, var(--highlight-color) 40%, transparent 40%);    padding: 0 6rem 0 6rem;
     margin-top: 0;
 }
 
