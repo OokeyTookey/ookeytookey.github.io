@@ -29,6 +29,38 @@ a:hover {
 p span {
     background: linear-gradient(to top, #D3EEE1 40%, transparent 30%);
 }
+/*----Key BG------------------------------*/
+.key-bg{
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .key{
+    position: absolute;
+    opacity: 0;
+    color: var(--key-color);
+    animation-name: drift-fade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  .key svg{
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.03));
+  }
+
+  @keyframes drift-fade{
+    0%   { opacity: 0; transform: translateY(30px) rotate(var(--rot-start, -8deg)); }
+    15%  { opacity: var(--peak-opacity, 0.35); }
+    50%  { opacity: var(--peak-opacity, 0.35); transform: translateY(-10px) rotate(var(--rot-end, 6deg)); }
+    85%  { opacity: var(--peak-opacity, 0.35); }
+    100% { opacity: 0; transform: translateY(-40px) rotate(var(--rot-start, -8deg)); }
+  }
 
 
 /*------------------------- Title -----------------------*/

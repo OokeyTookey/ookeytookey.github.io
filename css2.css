@@ -8,23 +8,25 @@ body {
 }
 
 :root {
-  /* Step 1: Tell the browser the page supports both modes */
-  color-scheme: light;
+    color-scheme: light;
 
-  /* Step 2: Define responsive color tokens (Light color, Dark color) */
-  --bg-primary: light-dark(rgb(255, 253, 245), #1d2532);
-  --text-primary: light-dark(#333333, #ffffff);
-  --accent: light-dark(#0066cc, #4da6ff);
-  --paragraph-txt: light-dark(#171717, #2d2c2c);
-  --highlight-color: light-dark(#D3EEE1, #2b895b);
+    --bg-primary: light-dark(rgb(255, 253, 245), #1d2532);
+    --text-primary: light-dark(#333333, #ffffff);
+    --accent: light-dark(#0066cc, #4da6ff);
+    --paragraph-txt: light-dark(#171717, #2d2c2c);
+    --highlight-color: light-dark(#D3EEE1, #2b895b);
+    --cream-bg-1: #efe6cc;
+    --cream-bg-2: #f3ecdc;
+    --key-color: #c9b98a;
 }
 
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
 }
 
-p, body p{
+p,
+body p {
     color: var(--paragraph-txt);
     text-align: center;
 }
@@ -36,11 +38,11 @@ a:link {
     cursor: pointer;
 }
 
-a:visited{
-     color: #4682B4;
+a:visited {
+    color: #4682B4;
 }
 
-a:hover{
+a:hover {
     color: #46b48c;
 }
 
@@ -53,13 +55,64 @@ h2 {
 
 h3 {
     margin-bottom: 0;
+    text-align: center;
+}
+
+/*----Key BG------------------------------*/
+.key-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.key {
+    position: absolute;
+    opacity: 0;
+    color: var(--key-color);
+    animation-name: drift-fade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.key svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.03));
+}
+
+@keyframes drift-fade {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) rotate(var(--rot-start, -8deg));
+    }
+
+    15% {
+        opacity: var(--peak-opacity, 0.35);
+    }
+
+    50% {
+        opacity: var(--peak-opacity, 0.35);
+        transform: translateY(-10px) rotate(var(--rot-end, 6deg));
+    }
+
+    85% {
+        opacity: var(--peak-opacity, 0.35);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-40px) rotate(var(--rot-start, -8deg));
+    }
 }
 
 
 
 /* -----Nav Bar-------------------------------------*/
 
-.navigation-bar{
+.navigation-bar {
 
     position: sticky;
     top: 0;
@@ -89,7 +142,8 @@ h3 {
 
 .about-me-hero h1 {
     font-size: 3rem;
-background: linear-gradient(to top, var(--highlight-color) 40%, transparent 40%);    padding: 0 6rem 0 6rem;
+    background: linear-gradient(to top, var(--highlight-color) 40%, transparent 40%);
+    padding: 0 6rem 0 6rem;
     margin-top: 0;
 }
 
@@ -173,13 +227,25 @@ background: linear-gradient(to top, var(--highlight-color) 40%, transparent 40%)
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10rem 0 5rem 0;
+    margin: 10rem 0 2rem 0;
 }
 
 .commerical-projects-container {
     display: flex;
     justify-content: center;
-    gap: 8rem;
+    gap: 2rem;
+}
+
+.personal-projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.commerical-projects-container .project {
+    width: clamp(150px, 30vw, 600px);
 }
 
 .project {
@@ -190,24 +256,29 @@ background: linear-gradient(to top, var(--highlight-color) 40%, transparent 40%)
     gap: 4px;
 
     background: white;
-    padding: 15px 15px 4rem;
+    padding: 15px 15px 2rem;
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    width: clamp(150px, 22vw, 600px);
+    /* width: clamp(150px, 30vw, 600px); */
     cursor: pointer;
 
-    /*
-    -git -> github / gitfork / gitkraken / sourcetree
-    -Trello / Jira
-    - Unity / -> plans to introduce unreal
-    - 3Ds Max / -> plans to introduceblender
-    - Photoshop
-
-    */
+    transition: 0.5s ease;
 }
+
+
+.project:hover {
+    transform: scale(105%);
+}
+
+.project iframe {
+    aspect-ratio: 4/3;
+}
+
 
 .project h3 {
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    ;
 }
 
 .project ul {
@@ -231,19 +302,22 @@ background: linear-gradient(to top, var(--highlight-color) 40%, transparent 40%)
     margin-top: 1rem;
 }
 
-.commercial-p1 {
-    transform: rotate(2deg);
-    transition: 0.5s ease;
+.project img {
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    max-width: 100%;
+
 }
 
-.commercial-p2 {
-    transform: rotate(-4deg);
-    transition: 1s ease;
-}
 
-.commercial-p1:hover,
-.commercial-p2:hover {
-    transform: rotate(0deg) scale(120%);
+.skill-label {
+
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    transition: padding-right 0.5s, padding-left 0.5s;
+    margin-bottom: 0%;
+    border-radius: 10px;
+    font-size: clamp(.5rem, 1vw, 1.2rem);
+    text-align: center;
 }
 
 /* ------------------------------------------*/
@@ -257,11 +331,11 @@ background: linear-gradient(to top, var(--highlight-color) 40%, transparent 40%)
 /* Animations -------------------------------- */
 
 @keyframes fadeInCenter {
-	0% {
-		opacity: 0;
-	}
+    0% {
+        opacity: 0;
+    }
 
-	100% {
-		opacity: 1;
-	}
+    100% {
+        opacity: 1;
+    }
 }
