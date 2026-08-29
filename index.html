@@ -17,7 +17,7 @@
 
 <body>
 
-<!-- Floating key background -->
+    <!-- Floating key background -->
     <div class="key-bg" id="keyBg"></div>
 
     <script>
@@ -49,8 +49,8 @@
 
                 // Base position is the cell's top-left, then jitter within the cell
                 // but leave a margin so icons don't butt up against cell edges.
-                const jitterX = cellW * 0.15 + Math.random() * (cellW * 0.7);
-                const jitterY = cellH * 0.15 + Math.random() * (cellH * 0.7);
+                const jitterX = cellW * 0.25 + Math.random() * (cellW * 0.7);
+                const jitterY = cellH * 0.25 + Math.random() * (cellH * 0.7);
                 const top = row * cellH + jitterY;
                 const left = col * cellW + jitterX;
 
@@ -86,14 +86,11 @@
             <a href="#">
                 <li>Home</li>
             </a>
-            <a href="#">
+            <a href="#projects-section">
                 <li>Projects</li>
             </a>
-            <a href="#">
-                <li>Research</li>
-            </a>
-            <a href="#">
-                <li>Blog</li>
+            <a href="#blogs-research">
+                <li>Blogs & Research</li>
             </a>
             <a href="#">
                 <li>About Me</li>
@@ -129,110 +126,113 @@
 
         <!-----------------Commerical Projects---------------------------------------------------------------------->
 
-        <div class="container-title">
-            <h2>Commercial projects</h2>
-            <p>Projects made with a larger team / studio with commerical release.</p>
-        </div>
-
-        <div class="commerical-projects-container">
-
-            <!--Enci's Solution------------------------------------------------------------------------------>
-
-
-            <div class="project">
-                <iframe src="https://www.youtube.com/embed/sNHuSvFeu5E?si=BpoT5JfdwNRJOOjt" title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <h3>💎 <a href="https://www.darkemerald.ae/encissolution" target="_blank">Enci's Solution</a></h3>
-                <ul>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="#638863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-users-icon lucide-users">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                            <path d="M16 3.128a4 4 0 0 1 0 7.744" />
-                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                            <circle cx="9" cy="7" r="4" />
-                        </svg> 19</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="#638863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-clock-icon lucide-clock">
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="M12 6v6l4 2" />
-                        </svg> 12 Months</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="#638863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-hammer-icon lucide-hammer">
-                            <path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9" />
-                            <path d="m18 15 4-4" />
-                            <path
-                                d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5" />
-                        </svg> Unity Engine</li>
-                </ul>
-                <br>
-                <p>Studio: Dark Emerald</p>
-                <br>
-                <p>Set in a dystopian world filled with mystery. Follow Ji'we and Enci as they climb up through the
-                    layers trying to reach the surface of planet Regalia.
-                    3D side scroller with a deep narrative and precision platforming. Similar to Celeste.</p>
-                <br>
-                <ul>
-                    <li class="skill-label" style="background-color: #D3EEE1">Game Design</li>
-                    <li class="skill-label" style="background-color: #D3EEE1">Narrative / Level Design</li>
-                    <li class="skill-label" style="background-color: #dbcdf0">Scrum Master</li>
-
-                </ul>
+        <section id="projects-section">
+            <div class="container-title">
+                <h2>Commercial projects</h2>
+                <p>Projects made with a larger team / studio with commerical release.</p>
             </div>
 
+            <div class="commerical-projects-container">
 
-            <!--Growtopia------------------------------------------------------------------------------>
+                <!--Enci's Solution------------------------------------------------------------------------------>
 
 
-            <div class="project">
-                <iframe src="https://www.youtube.com/embed/3Iw_tPC5vo0?si=egb4Cp78vJxK0er4" title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <h3>🪴<a href="https://www.darkemerald.ae/encissolution" target="_blank">Growtopia</a></h3>
-                <ul>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="#638863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-users-icon lucide-users">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                            <path d="M16 3.128a4 4 0 0 1 0 7.744" />
-                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                            <circle cx="9" cy="7" r="4" />
-                        </svg> 16</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="#638863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-clock-icon lucide-clock">
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="M12 6v6l4 2" />
-                        </svg> 13 Months</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="#638863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-hammer-icon lucide-hammer">
-                            <path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9" />
-                            <path d="m18 15 4-4" />
-                            <path
-                                d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5" />
-                        </svg> Custom C++ Engine</li>
-                </ul>
-                <br>
-                <p>Studio: Ubisoft</p>
-                <br>
-                <p>Growtopia is a free-to-play, 2D sandbox MMO focused on creation, farming, and trading with ~80,000
-                    concurrent players. You can build almost anything, interact in a vast community, and utilize a
-                    player-driven economy.
-                </p>
-                <br>
-                <ul>
-                    <li class="skill-label" style="background-color: #D3EEE1">Game Design</li>
-                    <li class="skill-label" style="background-color: #c6def1">Feature Design</li>
-                    <li class="skill-label" style="background-color: #c6def1">Engine Intergration</li>
-                </ul>
+                <div class="project">
+                    <iframe src="https://www.youtube.com/embed/sNHuSvFeu5E?si=BpoT5JfdwNRJOOjt"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3>💎 <a href="https://www.darkemerald.ae/encissolution" target="_blank">Enci's Solution</a></h3>
+                    <ul>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="#638863" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-users-icon lucide-users">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                <circle cx="9" cy="7" r="4" />
+                            </svg> 19</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="#638863" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-clock-icon lucide-clock">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                            </svg> 12 Months</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="#638863" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer">
+                                <path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9" />
+                                <path d="m18 15 4-4" />
+                                <path
+                                    d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5" />
+                            </svg> Unity Engine</li>
+                    </ul>
+                    <br>
+                    <p>Studio: Dark Emerald</p>
+                    <br>
+                    <p>Set in a dystopian world filled with mystery. Follow Ji'we and Enci as they climb up through the
+                        layers trying to reach the surface of planet Regalia.
+                        3D side scroller with a deep narrative and precision platforming. Similar to Celeste.</p>
+                    <br>
+                    <ul>
+                        <li class="skill-label" style="background-color: #D3EEE1">Game Design</li>
+                        <li class="skill-label" style="background-color: #D3EEE1">Narrative / Level Design</li>
+                        <li class="skill-label" style="background-color: #dbcdf0">Scrum Master</li>
+
+                    </ul>
+                </div>
+
+
+                <!--Growtopia------------------------------------------------------------------------------>
+
+
+                <div class="project">
+                    <iframe src="https://www.youtube.com/embed/3Iw_tPC5vo0?si=egb4Cp78vJxK0er4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3>🪴<a href="https://www.darkemerald.ae/encissolution" target="_blank">Growtopia</a></h3>
+                    <ul>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="#638863" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-users-icon lucide-users">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                <circle cx="9" cy="7" r="4" />
+                            </svg> 16</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="#638863" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-clock-icon lucide-clock">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                            </svg> 13 Months</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="#638863" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer">
+                                <path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9" />
+                                <path d="m18 15 4-4" />
+                                <path
+                                    d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5" />
+                            </svg> Custom C++ Engine</li>
+                    </ul>
+                    <br>
+                    <p>Studio: Ubisoft</p>
+                    <br>
+                    <p>Growtopia is a free-to-play, 2D sandbox MMO focused on creation, farming, and trading with
+                        ~80,000
+                        concurrent players. You can build almost anything, interact in a vast community, and utilize a
+                        player-driven economy.
+                    </p>
+                    <br>
+                    <ul>
+                        <li class="skill-label" style="background-color: #D3EEE1">Game Design</li>
+                        <li class="skill-label" style="background-color: #c6def1">Feature Design</li>
+                        <li class="skill-label" style="background-color: #c6def1">Engine Intergration</li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-----------------Personal Projects---------------------------------------------------------------------->
 
@@ -369,7 +369,88 @@
                 </ul>
             </div>
 
+            <div class="project">
+                <img src="images/lootin.gif">
+                <h3>☠️<a href="https://tookey.itch.io/rootin-for-lootin" target="_blank">Root'in for Loot'in</a></h3>
+                <ul>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="#638863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-users-icon lucide-users">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <circle cx="9" cy="7" r="4" />
+                        </svg> 2</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="#638863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-clock-icon lucide-clock">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg> 48 hrs</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="#638863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-hammer-icon lucide-hammer">
+                            <path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9" />
+                            <path d="m18 15 4-4" />
+                            <path
+                                d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5" />
+                        </svg> Unity</li>
+                </ul>
+                <br>
+                <p>A small, pirate themed 2D platformer developed for the Global Game Jam in 2023. Time moves when you
+                    move, find the legendary Root Beer!
+                </p>
+                <br>
+                <ul>
+                    <li class="skill-label" style="background-color: #D3EEE1">Game Design</li>
+                    <li class="skill-label" style="background-color: #dbcdf0">Project Manager</li>
+                    <li class="skill-label" style="background-color: #c6def1">Engine Intergration</li>
+                </ul>
+            </div>
+
         </div>
+
+        <section id="blogs-research">
+            <div class="container-title">
+                <h2>Blogs & Research</h2>
+                <p>A collection of blogs, articles and research papers written.</p>
+            </div>
+
+            <div class="blogs-container">
+                <div class="blog-selection">
+                    <div class="blog-inform">
+                        <h4>Name of Article</h4>
+                        <p>Text text</p>
+                    </div>
+                    <div class="blog-inform">
+                        <h4>Name of Article</h4>
+                        <p>Text text</p>
+                    </div>
+                    <div class="blog-inform">
+                        <h4>Name of Article</h4>
+                        <p>Text text</p>
+                    </div>
+                </div>
+                <div class="current-blog">
+                    <h3>This is the title of the blog post</h3>
+                    <p>This is the paragrpah of the blog post.</p>
+                </div>
+
+            </div>
+
+    </div>
+    </section>
+
+    <section id="about-me">
+        <div class="container-title">
+            <h2>About Me</h2>
+            <p>A collection of blogs, articles and research papers written.</p>
+        </div>
+    </section>
+
+
+
+
 
 
     </div>
@@ -377,7 +458,7 @@
     <p class="dosomething"></p>
 
 
-    
+
 
     <footer>
         <div class="copyright">Copyright © Anna Tookey. Made with 🧋 and ❤️</div>
