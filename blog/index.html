@@ -1,0 +1,42 @@
+---
+layout: default
+title: Blogs & Research
+permalink: /blog/
+---
+<section id="blogs-research">
+    <div class="container-title">
+        <h2>Blogs & Research</h2>
+        <p>A collection of blogs, articles and research papers written.</p>
+    </div>
+
+    <div class="blogs-container blogs-list-view">
+        <div class="blog-selection blog-selection--full">
+            {% for post in paginator.posts %}
+            <a class="blog-link" href="{{ post.url | relative_url }}">
+                <div class="blog-inform">
+                    <h4>{{ post.title }}</h4>
+                    <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+                    <p>{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+                </div>
+            </a>
+            {% else %}
+            <div class="blog-inform">
+                <h4>No posts yet</h4>
+                <p>Add markdown files to <code>_posts/</code> to see them appear here.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% if paginator.total_pages > 1 %}
+    <nav class="pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}">← Newer</a>
+        {% endif %}
+        <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}">Older →</a>
+        {% endif %}
+    </nav>
+    {% endif %}
+</section>

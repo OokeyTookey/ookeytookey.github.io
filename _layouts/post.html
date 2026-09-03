@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<section id="post" class="post-section">
+    <div class="container-title">
+        <h2>{{ page.title }}</h2>
+        <p class="post-meta">
+            {{ page.date | date: "%B %-d, %Y" }}
+            {% if page.tags and page.tags.size > 0 %}
+                &nbsp;·&nbsp;
+                {% for tag in page.tags %}<span class="skill-label" style="background-color: #c6def1">{{ tag }}</span>{% endfor %}
+            {% endif %}
+        </p>
+    </div>
+
+    <article class="current-blog post-content">
+        {{ content }}
+    </article>
+
+    <p class="post-back"><a href="{{ '/blog/' | relative_url }}">← Back to all posts</a></p>
+</section>
